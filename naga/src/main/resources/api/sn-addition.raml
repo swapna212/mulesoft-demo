@@ -1,0 +1,48 @@
+#%RAML 1.0
+title: sn addition
+version: v1
+protocols:
+  - HTTP
+
+/addition:
+  get:
+    queryParameters:
+      number1:
+        required: true
+        type: number
+        example:
+          5
+      number2:
+        required: true
+        type: number
+        example:
+          9
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {"message" : "result is 25"}
+
+/subtraction:
+  put:
+    queryParameters:
+      number1:
+        required: true
+        type: number
+        example:
+          6
+      number2:
+        required: true
+        type: number
+        example:
+          2
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {"message" : "result is 4"}
+              
+
+    
